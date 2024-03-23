@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "ollama-node": "^0.1.27"
+  }
+}
