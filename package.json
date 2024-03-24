@@ -1,12 +1,25 @@
 {
-  "type": "module",
   "scripts": {
-    "build": "tsx ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@langchain/community": "^0.0.41",
     "@prisma/client": "^5.11.0",
     "langchain": "^0.1.28",
-    "ollama-node": "^0.1.27"
+    "next": "14.1.4",
+    "ollama-node": "^0.1.27",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4"
   }
 }
