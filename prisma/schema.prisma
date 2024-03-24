@@ -14,14 +14,15 @@ datasource db {
 }
 
 model Session {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  logs      Log[]
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  messages  Message[]
 }
 
-model Log {
+model Message {
   id        String   @id @default(cuid())
-  role      String
+  type      String
+  content   String
   createdAt DateTime @default(now())
   session   Session  @relation(fields: [sessionId], references: [id])
   sessionId String
