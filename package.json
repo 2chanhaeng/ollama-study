@@ -2,6 +2,7 @@
   "type": "module",
   "dependencies": {
     "@langchain/community": "^0.0.41",
+    "@prisma/client": "^5.11.0",
     "langchain": "^0.1.28",
     "ollama-node": "^0.1.27"
   }
