@@ -7,6 +7,7 @@
     "esModuleInterop": true,
     "module": "esnext",
     "target": "esnext",
+    "sourceMap": true,
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
