@@ -1,4 +1,4 @@
-import { Role, TemplateMessage } from "@/types";
+import { Role } from "@/types";
 
 interface BaseMessageProps {
   style: React.CSSProperties;
