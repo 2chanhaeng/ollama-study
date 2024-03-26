@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { Role, TemplateMessage } from "@/types";
 import prisma from "@/prisma";
 import chat from "@/utils/chat";
-import mistral from "@/model/mistral";
+import models from "@/model";
 
 export async function getMessages(id: string): Promise<TemplateMessage[]> {
   const session = await prisma.session.findUnique({
@@ -24,7 +24,8 @@ export async function getMessages(id: string): Promise<TemplateMessage[]> {
 export async function sendMessage(formData: FormData) {
   const content = formData.get("content") as string;
   const sessionId = formData.get("sessionId") as string;
-  const talk = await chat(mistral, sessionId);
+  const model = "llama2";
+  const talk = await chat(models[model], sessionId);
 
   talk(content);
   revalidatePath(`/chat/${sessionId}`, "page");
