@@ -1,5 +1,5 @@
-import Messages from "../components/Messages";
 import { getMessages, sendMessage } from "./actions";
+import Messages from "./components/Messages";
 import ChatBoard from "../components/Chat/Board";
 import ChatForm from "../components/Chat/Form";
 

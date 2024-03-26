@@ -1,7 +1,7 @@
 "use client";
 
 import { TemplateMessage } from "@/types";
-import Message from "./Message";
+import Message from "../Message";
 
 export default function Messages({
   messages,
